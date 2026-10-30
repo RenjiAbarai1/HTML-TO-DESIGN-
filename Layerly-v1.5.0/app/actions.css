@@ -1,0 +1,29 @@
+.capture-actions {
+  position: fixed;
+  z-index: 5;
+  right: 24px;
+  bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #d9d9d5;
+  box-shadow: 0 14px 45px #0002;
+}
+.capture-actions > div { padding: 0 11px 0 5px; min-width: 190px; }
+.capture-actions b, .capture-actions small { display: block; }
+.capture-actions b { font-size: 12px; }
+.capture-actions small { font-size: 10px; color: #888; margin-top: 4px; }
+.capture-actions button, .capture-actions > a { height: 42px; border: 1px solid #d8d8d4; background: #f6f6f3; padding: 0 14px; font-size: 11px; font-weight: 650; display:flex;align-items:center;text-decoration:none;color:#171717; }
+.capture-actions button.dark { background: #171717; color: #fff; border-color: #171717; }
+.capture-actions button.subtle { color:#666; }
+.modalactions.stacked { display: grid; grid-template-columns: 1fr 1fr auto; }
+.modaldownload { border: 1px solid #deded9; padding: 11px 12px; text-decoration: none; font-size: 11px !important; background: #fafaf8; }
+@media (max-width: 720px) {
+  .capture-actions { left: 12px; right: 12px; bottom: 12px; display: grid; grid-template-columns: 1fr 1fr; }
+  .capture-actions > div { grid-column: 1 / -1; }
+  .capture-actions button { width: 100%; }
+  .modalactions.stacked { grid-template-columns: 1fr; }
+  .modalactions.stacked button { width: 100%; }
+}

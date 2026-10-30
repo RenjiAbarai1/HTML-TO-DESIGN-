@@ -1,0 +1,20 @@
+{
+  "name": "Layerly \u2014 Website to editable design",
+  "api": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html",
+  "editorType": [
+    "figma"
+  ],
+  "networkAccess": {
+    "allowedDomains": [
+      "http://localhost:4837"
+    ],
+    "devAllowedDomains": [
+      "http://localhost:4837"
+    ],
+    "reasoning": "Connects to your local Layerly app to import your own captured webpage."
+  },
+  "id": "1669428175320861574",
+  "documentAccess": "dynamic-page"
+}

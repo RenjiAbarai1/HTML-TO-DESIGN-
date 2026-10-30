@@ -1,0 +1,13 @@
+{
+  "name": "layerly-local",
+  "version": "1.5.0",
+  "private": true,
+  "scripts": {
+    "test": "node tests/mock-figma.js",
+    "test:workflow": "node tests/mock-figma.js --capture-url"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Local webpage-to-editable-Figma capture app and development plugin"
+}

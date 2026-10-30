@@ -1,0 +1,20 @@
+.developerfiles{position:relative;color:#777}
+.developerfiles summary{cursor:pointer;text-decoration:underline;text-underline-offset:2px;list-style:none}
+.developerfiles summary::-webkit-details-marker{display:none}
+.developerfiles[open]{background:#fff;border:1px solid #ddd;padding:7px 9px;box-shadow:0 8px 24px #0002}
+.developerfiles a{display:block;margin-top:7px;color:#555;text-decoration:none;white-space:nowrap}
+@media(max-width:620px){.developerfiles{width:100%}.developerfiles[open]{box-shadow:none}}
+.capture-notes{border-bottom:1px solid #e6e6e2;background:#fffdf7;padding:10px 16px;color:#665a3a;font-size:11px;line-height:1.45}
+.capture-notes summary{cursor:pointer;font-weight:700}
+.capture-notes ul{margin:8px 0 0;padding-left:18px}
+.capture-notes li+li{margin-top:5px}
+.capture-notes.hidden{display:none}
+.install-help{border:1px solid #e5e5e0;background:#fafaf8;padding:12px;margin:12px 0;font-size:11px;line-height:1.55}
+.install-help summary{cursor:pointer;font-weight:700}
+.install-help ol{margin:10px 0;padding-left:19px}
+.install-help .modaldownload{display:block;margin-top:8px}
+.workspace{grid-template-rows:minmax(0,1fr)}
+.workspace-right{overflow:hidden}
+.previewarea.has-preview{display:block;flex:1 1 0;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-color:#b8b8b3 #f2f2ef}
+.previewarea.has-preview .previewimage{position:static;inset:auto;display:block;width:100%;height:auto;max-width:none;max-height:none;object-fit:fill;box-shadow:none}
+@media(max-width:950px){.workspace{grid-template-rows:auto auto}.workspace-right{overflow:visible}.previewarea.has-preview{height:350px;min-height:350px;flex:none}}

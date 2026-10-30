@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+:root{color-scheme:light;--ink:#171717;--muted:#7d7d78;--line:#e7e7e2;--soft:#f6f6f3;--green:#37a96f}*{box-sizing:border-box}body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#fff;color:var(--ink);margin:0;font-size:12px}button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}.header{height:58px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 20px}.brand{font-size:17px;font-weight:750;letter-spacing:-.8px}.brand span{color:#aaa}.engine{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.55px}.dot{width:7px;height:7px;background:#aaa;border-radius:50%}.dot.connected{background:var(--green)}main{padding:20px}.eyebrow{font-size:9px;letter-spacing:1px;color:#8b8b86;font-weight:750}h1{font-size:26px;line-height:1.05;letter-spacing:-1.15px;font-weight:620;margin:9px 0 7px}.lede{color:var(--muted);line-height:1.55;margin:0 0 17px}.fieldlabel{display:block;font-weight:650;margin:0 0 7px}.urlrow{height:46px;border:1px solid #d8d8d3;display:flex;align-items:center;background:#fff}.urlrow:focus-within{border-color:#222;box-shadow:0 0 0 2px #2221}.urlrow span{font-size:17px;margin:0 10px 0 13px;color:#777}.urlrow input{border:0;outline:0;min-width:0;flex:1;padding:0 12px 0 0;color:#202020}.settingsbar{margin:15px 0 8px;display:flex;align-items:center;justify-content:space-between}.settingsbar b{font-size:10px;letter-spacing:.8px}.settingsbar small{color:#999}.options{border:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr}.option{min-height:47px;padding:9px 11px;display:flex;align-items:center;justify-content:space-between;gap:8px;border-bottom:1px solid #efefec}.option:nth-child(odd){border-right:1px solid #efefec}.option:nth-last-child(-n+2){border-bottom:0}.option span:first-child{min-width:0}.option b,.option small{display:block}.option b{font-size:10px}.option small{font-size:9px;color:#999;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.option input{position:absolute;opacity:0}.toggle{width:27px;height:16px;border-radius:20px;background:#d5d5d0;position:relative;flex:0 0 auto}.toggle:after{content:"";position:absolute;width:10px;height:10px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.15s}.option input:checked+.toggle{background:#202020}.option input:checked+.toggle:after{left:14px}.capturemeta{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}.selectbox,.checkrow{height:40px;border:1px solid var(--line);display:flex;align-items:center;padding:0 11px}.selectbox{gap:8px}.selectbox label,.checkrow{font-size:10px;color:#777}.selectbox select{border:0;outline:0;background:#fff;min-width:0;flex:1;font-weight:650}.checkrow{justify-content:space-between}.checkrow input{accent-color:#171717}.primary{border:0;background:#171717;color:#fff;width:100%;height:48px;margin-top:11px;display:flex;align-items:center;justify-content:space-between;padding:0 15px;font-weight:700;font-size:11px;letter-spacing:.2px}.primary:hover{background:#333}.statusbox{min-height:43px;margin-top:11px;padding:11px 12px;background:var(--soft);border:1px solid #ecece8;color:#666;font-size:10px;line-height:1.45;white-space:pre-wrap}.retry{width:100%;height:30px;margin-top:6px;border:1px solid #e2e2dd;background:#fff;color:#666;font-size:9px;font-weight:700;letter-spacing:.45px}.retry[hidden]{display:none}.secondaryrow{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:9px}.secondary{height:37px;border:1px solid var(--line);background:#fff;color:#555;font-size:10px;text-align:left;padding:0 10px}.filebutton{position:relative;display:flex;align-items:center}.filebutton input{display:none}.foot{border-top:1px solid var(--line);padding:11px 20px;color:#999;font-size:9px;line-height:1.45}.foot b{color:#555}
+</style>
+</head>
+<body>
+<header class="header"><div class="brand">layerly<span>.</span></div><div class="engine"><i class="dot" id="online"></i><span id="connected">CHECKING ENGINE</span></div></header>
+<main>
+  <div class="eyebrow">URL → EDITABLE FIGMA</div>
+  <h1>Paste. Convert.<br>Keep editing.</h1>
+  <p class="lede">Capture a public page and build native Figma layers without leaving this plugin.</p>
+  <label class="fieldlabel" for="url">Website URL</label>
+  <div class="urlrow"><span>↗</span><input id="url" type="url" placeholder="https://yourwebsite.com" spellcheck="false" autocomplete="url"></div>
+  <div class="settingsbar"><b>IMPORT SETTINGS</b><small>Applied before capture</small></div>
+  <div class="options">
+    <label class="option"><span><b>Auto Layout</b><small>Only where alignment is preserved</small></span><input type="checkbox" data-opt="autolayout" checked><i class="toggle"></i></label>
+    <label class="option"><span><b>Auto-height text</b><small>Optional; fixed boxes align closer</small></span><input type="checkbox" data-opt="editableText"><i class="toggle"></i></label>
+    <label class="option"><span><b>Components</b><small>Buttons and controls</small></span><input type="checkbox" data-opt="components" checked><i class="toggle"></i></label>
+    <label class="option"><span><b>Clean layers</b><small>Remove empty wrappers</small></span><input type="checkbox" data-opt="simplifyLayers" checked><i class="toggle"></i></label>
+    <label class="option"><span><b>Color styles</b><small>Reusable paint styles</small></span><input type="checkbox" data-opt="stylesVariables" checked><i class="toggle"></i></label>
+    <label class="option"><span><b>High-res images</b><small>Separate editable fills</small></span><input type="checkbox" data-opt="highResImages" checked><i class="toggle"></i></label>
+    <label class="option"><span><b>Smart names</b><small>HTML + semantic names</small></span><input type="checkbox" data-opt="layerNames" checked><i class="toggle"></i></label>
+    <label class="option"><span><b>Hyperlinks</b><small>Keep link targets</small></span><input type="checkbox" data-opt="hyperlinks" checked><i class="toggle"></i></label>
+  </div>
+  <div class="capturemeta">
+    <div class="selectbox"><label for="viewport">Viewport</label><select id="viewport"><option value="1440">Desktop · 1440</option><option value="1280">Laptop · 1280</option><option value="768">Tablet · 768</option><option value="390">Mobile · 390</option></select></div>
+    <label class="checkrow"><span>Full page</span><input id="full" type="checkbox" checked></label>
+  </div>
+  <button class="primary" id="convert" disabled><span>CONVERT &amp; IMPORT</span><span>↗</span></button>
+  <div class="statusbox" id="output" aria-live="polite">Connecting to the local Layerly engine…</div>
+  <button class="retry" id="retry" hidden>RETRY ENGINE CONNECTION</button>
+  <div class="secondaryrow"><button class="secondary" id="latest" disabled>Import latest capture</button><label class="secondary filebutton">Choose .layerly backup ↓<input id="upload" type="file" accept=".layerly,.json,application/json"></label></div>
+</main>
+<footer class="foot"><b>One-screen workflow:</b> the local engine must be running, but its browser page can be closed.</footer>
+<script>
+const $=id=>document.getElementById(id);let loading=false,connected=false,hasCapture=false;
+function setLoading(value,label){loading=value;$('convert').disabled=value||!connected;$('latest').disabled=value||!connected||!hasCapture;if(label)$('output').textContent=label;}
+function captureOptions(){const options={fullPage:$('full').checked,localStyles:false,hoverEffects:false};document.querySelectorAll('[data-opt]').forEach(el=>options[el.dataset.opt]=el.checked);return options;}
+function sendCapture(data){if(data.format!=='layerly.capture'||!Array.isArray(data.tree))throw Error('Invalid Layerly capture file');setLoading(true,`Creating ${data.tree.length} native Figma layers…`);parent.postMessage({pluginMessage:{type:'import-capture',capture:data}},'*');}
+function connection(){parent.postMessage({pluginMessage:{type:'check-connection'}},'*');}
+$('retry').onclick=()=>{setLoading(true,'Checking the local Layerly engine…');connection()};
+$('convert').onclick=()=>{if(loading)return;let url=$('url').value.trim();if(!url){$('output').textContent='Paste a public website URL first.';$('url').focus();return}setLoading(true,'Starting local page capture…');parent.postMessage({pluginMessage:{type:'capture-url',url,options:captureOptions(),viewport:{width:Number($('viewport').value),height:900}}},'*');};
+$('url').addEventListener('keydown',event=>{if(event.key==='Enter')$('convert').click()});
+$('latest').onclick=()=>{if(loading)return;setLoading(true,'Loading the latest local capture…');parent.postMessage({pluginMessage:{type:'load-latest'}},'*');};
+$('upload').onchange=async()=>{try{const file=$('upload').files?.[0];if(file)sendCapture(JSON.parse(await file.text()))}catch(error){setLoading(false,'Invalid backup: '+error.message)}};
+window.onmessage=event=>{const message=event.data.pluginMessage;if(!message)return;
+ if(message.type==='connection'){connected=!!message.connected;hasCapture=!!message.hasCapture;$('online').classList.toggle('connected',connected);$('connected').textContent=connected?`ENGINE READY · v${message.version||'?'}`:'ENGINE OFFLINE';$('retry').hidden=connected;setLoading(false,connected?(hasCapture?'Paste a link to convert, or import the latest capture.':'Paste a link and choose Convert & Import.'):(message.message||'Start Layerly, keep its Terminal open, then choose Retry. You may still choose a backup file.'));}
+ if(message.type==='progress')$('output').textContent=message.message;
+ if(message.type==='done'){hasCapture=connected||hasCapture;setLoading(false,`Imported ${message.count} editable layers.\n${message.layoutCount} Auto Layout frames · ${message.componentCount} components · ${message.imageCount} image/vector layers\n${message.styleCount} color styles${message.notes?' · '+message.notes:''}`);}
+ if(message.type==='error')setLoading(false,'Could not finish: '+message.message);
+};
+connection();
+</script>
+</body>
+</html>
